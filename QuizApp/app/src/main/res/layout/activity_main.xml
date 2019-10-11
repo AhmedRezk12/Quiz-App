@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:background="@drawable/quizzes"
+    tools:context=".MainActivity">
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Home_Title"
+                android:textAllCaps="true"
+                android:textStyle="bold|italic"
+                android:textSize="48sp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_marginBottom="32dp"
+                />
+            <EditText
+                android:id="@+id/student_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/rounded"
+                android:hint="Please Enter Your Name"
+                android:layout_marginBottom="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@android:color/black"
+                />
+            <Button
+                android:id="@+id/start_quiz"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:padding="10dp"
+                android:text="@string/start_quiz"
+                android:background="@drawable/rounded"
+                android:textStyle="bold"
+                android:onClick="StartQuiz"
+                android:textColor="@android:color/black"
+                android:enabled="false"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

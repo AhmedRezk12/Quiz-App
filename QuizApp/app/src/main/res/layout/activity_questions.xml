@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    tools:context=".Questions"
+    android:background="#ECEFF1"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+
+    >
+    <TextView
+        android:id="@+id/question_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@android:color/black"
+        android:textStyle="italic|bold"
+        android:textSize="32sp"
+
+        android:paddingLeft="15dp"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/answers"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+
+        >
+        <RadioButton
+            android:id="@+id/answer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Answers"
+            android:onClick="Answer1Selected"
+            android:layout_marginBottom="8dp"
+            />
+
+        <RadioButton
+            android:id="@+id/answer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Answers"
+            android:onClick="Answer2Selected"
+            android:layout_marginBottom="8dp"
+            />
+
+        <RadioButton
+            android:id="@+id/answer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Answers"
+            android:onClick="Answer3Selected"
+            android:layout_marginBottom="8dp"
+            />
+
+        <RadioButton
+            android:id="@+id/answer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Answers"
+            android:onClick="Answer4Selected"
+            android:layout_marginBottom="8dp"
+            />
+
+
+    </RadioGroup>
+    <Button
+        android:id="@+id/SubmitAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_answer"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:onClick="SubmitAnswer"
+        android:background="@drawable/rounded"
+        android:padding="16dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+           android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="view grade"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="16dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:onClick="ViewGrade"
+            android:background="@drawable/rounded"
+            android:padding="16dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:onClick="NextQuestion"
+        android:background="@drawable/rounded"
+        android:padding="16dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
